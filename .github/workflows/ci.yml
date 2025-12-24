@@ -52,7 +52,8 @@ jobs:
 
       - name: Start Up Frontend
         run: |
-          bun dev &
+          bun i
+          bun dev
           sleep 1
 
       - name: Install
