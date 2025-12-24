@@ -1,0 +1,32 @@
+{
+  "Home": {
+    "title": "Downkit Scaffold",
+    "subtitle": "Demo home for Next.js + Tailwind + shadcn/ui",
+    "currentLocale": "Current locale",
+    "serverSectionTitle": "Server Component example",
+    "clientSectionTitle": "Client Component example"
+  },
+  "Locale": {
+    "switchLabel": "Switch language",
+    "zhCN": "简体中文",
+    "zhTW": "繁體中文",
+    "en": "English"
+  },
+  "Theme": {
+    "modeLabel": "Color mode",
+    "light": "Light",
+    "dark": "Dark",
+    "greenLabel": "Green theme",
+    "on": "On",
+    "off": "Off"
+  },
+  "ClientExample": {
+    "count": "Count",
+    "increment": "Increment"
+  },
+  "ServerExample": {
+    "serverTime": "Server time"
+  }
+}
+
+

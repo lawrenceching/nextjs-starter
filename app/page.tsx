@@ -1,9 +1,6 @@
-import { Button } from "@/components/ui/button"
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <Button>Click me</Button>
-    </div>
-  )
+  // Middleware handles locale detection; this is a deterministic fallback.
+  redirect("/zh-CN");
 }

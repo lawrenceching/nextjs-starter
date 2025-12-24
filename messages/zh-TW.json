@@ -1,0 +1,32 @@
+{
+  "Home": {
+    "title": "Downkit 腳手架",
+    "subtitle": "Next.js + Tailwind + shadcn/ui 範例首頁",
+    "currentLocale": "目前語言",
+    "serverSectionTitle": "Server Component 範例",
+    "clientSectionTitle": "Client Component 範例"
+  },
+  "Locale": {
+    "switchLabel": "切換語言",
+    "zhCN": "简体中文",
+    "zhTW": "繁體中文",
+    "en": "English"
+  },
+  "Theme": {
+    "modeLabel": "外觀模式",
+    "light": "淺色",
+    "dark": "深色",
+    "greenLabel": "綠色主題",
+    "on": "開啟",
+    "off": "關閉"
+  },
+  "ClientExample": {
+    "count": "計數",
+    "increment": "加一"
+  },
+  "ServerExample": {
+    "serverTime": "伺服器時間"
+  }
+}
+
+

@@ -1,0 +1,23 @@
+[Unit]
+Description=Downkit (Next.js) service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/downkit
+
+# Make sure your environment variables exist here (or use an EnvironmentFile).
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=HOSTNAME=0.0.0.0
+
+# Bun should be installed on the machine and available on PATH.
+ExecStart=/usr/bin/env bun run start
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
+
+

@@ -81,6 +81,15 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+.theme-green {
+  /* Keep neutrals the same; only make the accent/primary system green so shadcn tokens update. */
+  --primary: oklch(0.62 0.18 145);
+  --primary-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.62 0.18 145);
+  --accent: oklch(0.94 0.06 145);
+  --accent-foreground: oklch(0.205 0 0);
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -113,6 +122,14 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+.dark.theme-green {
+  --primary: oklch(0.72 0.18 145);
+  --primary-foreground: oklch(0.205 0 0);
+  --ring: oklch(0.72 0.18 145);
+  --accent: oklch(0.32 0.08 145);
+  --accent-foreground: oklch(0.985 0 0);
 }
 
 @layer base {
