@@ -53,7 +53,7 @@ jobs:
       - name: Start Up Frontend
         run: |
           bun i
-          bun dev
+          bun dev &
           sleep 1
 
       - name: Install
