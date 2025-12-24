@@ -176,6 +176,40 @@ E2E_BASE_URL=http://localhost:3000 bun run test:e2e
   - Keep app-specific components in `components/`
   - Keep shadcn/ui primitives in `components/ui/`
 
+## Git commit guideline (Conventional Commits)
+
+We follow the **Conventional Commits** specification:
+
+- Format:
+
+```text
+<type>[optional scope]: <description>
+```
+
+- Common types:
+  - `feat`: new feature
+  - `fix`: bug fix
+  - `docs`: documentation-only change
+  - `test`: add/update tests
+  - `ci`: CI workflow changes
+  - `chore`: maintenance (deps, tooling, non-user-facing work)
+
+- Scopes (optional): use short scopes like `i18n`, `theme`, `e2e`, `ci`, `docker`, `k8s`.
+- Breaking changes: add `!` after type/scope (e.g. `feat(i18n)!:`) or add a `BREAKING CHANGE:` footer.
+
+Examples:
+
+```text
+feat(i18n): add locale switcher for zh-CN/zh-TW/en
+fix(theme): persist green theme toggle across reloads
+test(unit): add RTL test for ClientExample
+test(e2e): add WDIO smoke test for home page
+ci: run e2e job on pull requests
+docs: document how to run tests locally
+```
+
+Reference: [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
+
 ## Scripts
 
 - **`dev`**: start Next.js dev server
@@ -267,6 +301,4 @@ Use this section as the **spec** for what “done” looks like when turning the
 
 This repo is configured for shadcn/ui via `components.json`. To add components, use the shadcn CLI (depending on how you manage tooling in your environment) and keep generated primitives in `components/ui/`.
 
----
 
-If you want, tell me your intended deployment target (Vercel, Cloudflare, self-hosted, etc.) and whether you want i18n/auth/testing included by default — I can update this spec to match your “baseline template” and add the missing scripts/config files. 
