@@ -51,18 +51,15 @@ jobs:
           bun-version: "1.3.0"
 
       - name: Install
-        run: bun install --frozen-lockfile
-
-      - name: Build
-        run: bun run build
+        run: cd e2e && bun install --frozen-lockfile
 
       - name: Test
-        run: bun run wdio      
+        run: cd e2e && bun run wdio      
 
       - name: 📦 Upload Logs
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: logs
-          path: logs
+          name: e2e/logs
+          path: e2e/logs
 
