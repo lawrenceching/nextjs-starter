@@ -165,6 +165,7 @@ E2E_BASE_URL=http://localhost:3000 bun run test:e2e
   - `components/ui/`: shadcn/ui generated components
 - **`lib/`**: shared utilities (e.g. `lib/utils.ts`)
 - **`public/`**: static assets
+- **`e2e/`**: e2e test
 
 ## Conventions
 
@@ -175,6 +176,20 @@ E2E_BASE_URL=http://localhost:3000 bun run test:e2e
 - **UI components**:
   - Keep app-specific components in `components/`
   - Keep shadcn/ui primitives in `components/ui/`
+
+## E2E Testing
+
+The e2e testing is implemented by `webdriver.io` (wdio).  
+The folder "e2e" is a standalone bun project with a standlone package.json file.  
+**NOTE** This is NOT a monorepo, and `e2e` is NOT a workspace in monorepo.  
+`e2e` a completely independent project and you need to enter the `e2e` folder before run commands.
+
+Commands:
+
+```
+# Run test
+cd e2e && bun run wdio
+```
 
 ## Git commit guideline (Conventional Commits)
 
@@ -248,7 +263,7 @@ Use this section as the **spec** for what “done” looks like when turning the
 
 - **Unit tests**: Vitest/Jest for utilities and components
 - **Component tests** (optional but recommended): React Testing Library
-- **E2E tests** (recommended): Playwright (critical flows)
+- **E2E tests** : webdriver.io
 - **Test coverage**: agree a threshold and enforce in CI (or enforce “changed files must have tests”)
 
 ### Environment & configuration (required)

@@ -50,6 +50,11 @@ jobs:
         with:
           bun-version: "1.3.0"
 
+      - name: Start Up Frontend
+        run: |
+          bun dev &
+          sleep 1
+
       - name: Install
         run: cd e2e && bun install --frozen-lockfile
 
